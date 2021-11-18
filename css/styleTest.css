@@ -16,6 +16,11 @@ body {
     
 }
 
+
+.image{
+    background: url(header.jpg) 100% 100% no-repeat;
+}
+
 .wrapper {
   display: grid;
   grid-template-rows: auto auto auto;
