@@ -1,0 +1,245 @@
+@-webkit-keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+body {
+  margin: 0px 0px 0px 0px;
+  width: 100%;
+  -webkit-animation: fade-in 2s linear;
+  /* Safari 4+ */
+  /* Fx 5+ */
+  /* Opera 12+ */
+  animation: fade-in 2s linear;
+  /* IE 10+, Fx 29+ */
+}
+
+.wrapper {
+  height: 900px;
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto auto auto;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: auto;
+  background-image: url("/img/mbg.png");
+  background-repeat: no-repeat;
+  background-size: 450px;
+}
+
+h1 {
+  font-family: "Segoe UI", sans-serif;
+  font-weight: 500;
+  margin: 16px auto 16px 0px;
+}
+
+main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 500px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+content {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: auto auto;
+  margin: auto 0px auto 0px;
+  gap: 1% 1%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.logo {
+  margin: 1px auto 0px auto;
+}
+
+.search {
+  width: 100%;
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: 100px;
+  gap: 5px;
+}
+
+.num_input {
+  width: 225px;
+  font-family: "Segoe UI", sans-serif;
+  color: #000000;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 20px;
+  margin: 16px auto 16px 0px;
+  padding: 5px 12px;
+  border-radius: 0.5rem;
+  background-color: #ffffff;
+  border: none;
+  display: block;
+}
+
+.btn_search {
+  cursor: pointer;
+  font-family: "Segoe UI", sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 20px;
+  margin: 16px auto 16px 0px;
+  padding: 12px 15px;
+  border-radius: 0.5rem;
+  -webkit-box-shadow: inset 0px -3px 7px 0px #464646;
+  box-shadow: inset 0px -3px 7px 0px #464646;
+  background: -o-linear-gradient(top, #535758 5%, #2d333b 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(5%, #535758), to(#2d333b));
+  background: linear-gradient(to bottom, #535758 5%, #2d333b 100%);
+  border: 0px;
+}
+
+.btn_search:hover {
+  background: -o-linear-gradient(top, #595a5a 5%, #000000 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(5%, #595a5a), to(#000000));
+  background: linear-gradient(to bottom, #595a5a 5%, #000000 100%);
+  color: red;
+}
+
+footer {
+  display: none;
+}
+
+@media all and (min-width: 480px) and (max-width: 768px) {
+  .num_input {
+    width: 290px;
+    font-size: 32px;
+  }
+
+  .btn_search {
+    font-size: 32px;
+  }
+
+  .wrapper {
+    background-image: url("/img/bg.png");
+    background-size: 1550px;
+  }
+
+  .search {
+    grid-template-rows: 150px;
+    gap: 10px;
+  }
+
+  footer {
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    display: grid;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    color: #b8b4b4;
+    font-family: "Segoe UI", sans-serif;
+  }
+}
+
+@media all and (min-width: 768px) and (max-width: 1024px) {
+  .num_input {
+    font-size: 42px;
+    width: 480px;
+  }
+
+  .btn_search {
+    font-size: 42px;
+  }
+
+  .search {
+    grid-template-rows: 120px;
+    gap: 15px;
+  }
+
+  .wrapper {
+    background-image: url("/img/bg.png");
+    background-size: 1550px;
+    height: 1080px;
+  }
+
+  footer {
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    display: grid;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    color: #b8b4b4;
+    font-family: "Segoe UI", sans-serif;
+  }
+}
+
+@media all and (min-width: 1024px) and (max-width: 1920px) {
+  .num_input {
+    font-size: 58px;
+    width: 480px;
+  }
+
+  .btn_search {
+    font-size: 58px;
+  }
+
+  .search {
+    grid-template-rows: 120px;
+    gap: 20px;
+  }
+
+  .wrapper {
+    background-image: url("/img/bg.png");
+    background-size: 1920px;
+    height: 1080px;
+  }
+
+  main {
+    height: 700px;
+  }
+
+  footer {
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    display: grid;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    color: #b8b4b4;
+    font-family: "Segoe UI", sans-serif;
+  }
+}
+
+.webp .wrapper { background-image: url(/img/mbg.webp); }
+
+@media all and (min-width: 480px) and (max-width: 768px) {
+  .webp .wrapper { background-image: url(/img/bg.webp); }
+}
+
+@media all and (min-width: 768px) and (max-width: 1024px) {
+  .webp .wrapper { background-image: url(/img/bg.webp); }
+}
+
+@media all and (min-width: 1024px) and (max-width: 1920px) {
+  .webp .wrapper { background-image: url(/img/bg.webp); }
+}
