@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width initial-scale=1">
-
+    <meta http-equiv="ScreenOrientation" content="autoRotate:disabled">
     <link rel="apple-touch-icon" sizes="57x57" href="img/apple-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="img/apple-icon-60x60.png">
     <link rel="apple-touch-icon" sizes="72x72" href="img/apple-icon-72x72.png">
@@ -29,15 +29,22 @@
     <title>Molzavod</title>
 </head>
 
-<body>
+<body onload="getFocus()">
     <div class="wrapper">
+        <header>
+            <h1>FILMS ONLINE</h1>
+        </header>
         <main>
             <div class="search">
                 <input id="id_film" class="num_input" type="text" placeholder="ID КиноПоиск">
-                <button class="btn_search" onclick="getID()">ПОИСК</button>
+                <button class="btn_search" onclick="getID()">SEARCH</button>
             </div>
             <div id="content"></div>
         </main>
+
+        <footer>
+            <h3>© 2022 films online</h3>
+        </footer>
     </div>
 </body>
 
