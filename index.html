@@ -26,23 +26,23 @@
     <script type="text/javascript" src="app.js"></script>
     <script type="text/javascript" src="js/offline.js"></script>
     <script type="text/javascript" src="js/script.js"></script>
-    <title>Molzavod</title>
+    <title>Films Online</title>
 </head>
 
 <body onload="getFocus()">
     <div class="wrapper">
-        <header>
-            <h1>FILMS ONLINE</h1>
-        </header>
         <main>
-            <div class="search">
-                <input id="id_film" class="num_input" type="number" placeholder="ID КиноПоиск">
-                <button class="btn_search" onclick="getID()">SEARCH</button>
-            </div>
-            <div id="content"></div>
+            <content>
+                <img class="logo" src="img/apple-icon-114x114.png" alt="">
+                <div class="search">
+                    <input id="id_film" class="num_input" type="text" placeholder="ID КиноПоиск">
+                    <button class="btn_search" onclick="getID()">SEARCH</button>
+                </div>
+                <div id="content"></div>
+            </content>
         </main>
-
         <footer>
+            <h3>© 2022 Films Online</h3>
         </footer>
     </div>
 </body>
