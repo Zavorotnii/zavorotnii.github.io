@@ -5,6 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width initial-scale=1">
     <meta http-equiv="ScreenOrientation" content="autoRotate:disabled">
+    <meta name="msapplication-TileColor" content="#E6E6FA">
+    <meta name="msapplication-TileImage" content="icons/ms-icon-144x144.png">
+    <meta name="theme-color" content="#E6E6FA">
+    <link rel="stylesheet" href="css/style.min.css">
     <link rel="apple-touch-icon" sizes="57x57" href="img/apple-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="img/apple-icon-60x60.png">
     <link rel="apple-touch-icon" sizes="72x72" href="img/apple-icon-72x72.png">
@@ -19,17 +23,10 @@
     <link rel="icon" type="image/png" sizes="96x96" href="img/favicon-96x96.png">
     <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
     <link rel="manifest" href="manifest.webmanifest">
-    <meta name="msapplication-TileColor" content="#E6E6FA">
-    <meta name="msapplication-TileImage" content="icons/ms-icon-144x144.png">
-    <meta name="theme-color" content="#E6E6FA">
-    <link rel="stylesheet" href="css/style.min.css">
-    <script type="text/javascript" src="app.js"></script>
-    <script type="text/javascript" src="js/offline.js"></script>
-    <script type="text/javascript" src="js/script.js"></script>
     <title>Films Online</title>
 </head>
 
-<body onload="getFocus()">
+<body>
     <div class="wrapper">
         <main>
             <content>
@@ -41,10 +38,11 @@
                 <div id="content"></div>
             </content>
         </main>
-        <footer>
-            <h3>© 2022 Films Online</h3>
+        <footer id="footer">
         </footer>
     </div>
+    <script type="text/javascript" src="app.js"></script>
+    <script type="text/javascript" src="js/script.min.js"></script>
 </body>
 
 </html>
