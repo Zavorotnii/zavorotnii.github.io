@@ -26,20 +26,26 @@
     <title>Films Online</title>
 </head>
 
-<body>
+<body onload="updateFilms()">
     <div class="wrapper">
-        <main>
-            <content>
+        <header>
+            <!-- <img class="logo" src="img/apple-icon-114x114.png" alt=""> -->
+            <div class="search">
                 <img class="logo" src="img/apple-icon-114x114.png" alt="">
-                <div class="search">
-                    <input id="id_film" class="num_input" type="text" placeholder="ID КиноПоиск">
-                    <button class="btn_search" onclick="searchFilm()">SEARCH</button>
-                </div>
-                <div id="content"></div>
-            </content>
+                <input id="id_film" class="num_input" type="text" placeholder="ID КиноПоиск">
+                <button class="btn_search" onclick="searchFilm()"><img src="img/search.png" alt=""></button>
+            </div>
+        </header>
+
+        <main>
+            <div id="content"></div>
+            <div id="poster_list" class="posterList"></div>
         </main>
-        <footer id="footer">
-        </footer>
+
+        <!-- <footer id="footer">
+            © 2022 Films Online
+
+        </footer> -->
     </div>
     <script type="text/javascript" src="app.js"></script>
     <script type="text/javascript" src="js/script.min.js"></script>
