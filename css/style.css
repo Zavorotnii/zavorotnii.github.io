@@ -33,6 +33,10 @@ body {
   display: grid;
 }
 
+.scroll {
+  height: 50px;
+}
+
 header {
   position: fixed;
   width: 100%;
@@ -208,6 +212,11 @@ header {
   color: #46BAEA;
 }
 
+.logo a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
 .chat {
   text-align: right;
 }
@@ -228,8 +237,7 @@ header {
   width: 17px;
   margin-top: 3px;
   cursor: pointer;
-      padding: 0px;
-  margin-left: -2px;
+  margin-left: -3px;
 }
 
 .software {
@@ -682,6 +690,23 @@ p {
   width: auto;
 }
 
+.comp_vision_content button {
+  width: 200px;
+  height: 30px;
+  margin: 25px auto 38px auto;
+  background-color: #ffffff;
+  border-radius: 20px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #46BAEA;
+  color: #2E3239;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  font-family: "Montserrat";
+  cursor: pointer;
+}
+
 .comp_vision_img {
   display: block;
   float: right;
@@ -802,6 +827,11 @@ footer {
 
 .logo_mob span {
   color: #46BAEA;
+}
+
+.logo_mob a {
+  text-decoration: none;
+  color: #ffffff;
 }
 
 .social_icon {
@@ -1032,6 +1062,10 @@ footer {
 }
 
 @media all and (min-width: 1024px) and (max-width: 1920px) {
+  .scroll {
+    height: 100px;
+  }
+
   h1 {
     font-size: 36px;
   }
