@@ -3,432 +3,498 @@
 
 <head>
     <meta charset="UTF-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link href='https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700' rel='stylesheet'>
-<link rel="stylesheet" href="css/style.min.css">
-<script src="js/script.js"></script>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700' rel='stylesheet'>
+    <link rel="stylesheet" href="css/style.min.css">
+    <script src="js/script.js"></script>
 
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
-<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-<title>FastoCloud</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <title>FastoCloud</title>
 </head>
 
 <body>
     <div class="wrapper">
-        <header><div class="inner_container">
-    <div class="header_wrapper">
-        <nav>
-            <div class="hamburger-menu">
-                <input id="menu__toggle" type="checkbox" />
-                <label class="menu__btn" for="menu__toggle">
-                    <span></span>
-                </label>
-                <ul class="menu__box">
-                    <li><a class="menu__item" href="index.html#complete">Products & Solutions</a></li>
-                    <li><a class="menu__item_active" href="pricing.html">Pricing</a></li>
-                    <li><a class="menu__item" href="downloads.html">Downloads</a></li>
-                </ul>
-            </div>
-        </nav>
-        <div class="logo"><a href="index.html">FASTO<span>CLOUD</span></a></div>
-        <div class="chat">
-            <a
-                href="mailto:support@fastogt.com?subject=Partnership with FastoCloud&body=Hi, I'd like to set up FastoCloud solution!">
-                <button class="caht_btn"><picture><source srcset="img/Vector.svg" type="image/webp"><img src="img/Vector.svg" alt=""></picture></button></a>
-        </div>
-        <div class="menu">
-            <a class="menu__i" href="index.html#complete">Products & Solutions</a>
-            <a class="menu__i_active" href="pricing.html">Pricing</a>
-            <a class="menu__i" href="downloads.html">Downloads</a>
-            <a
-                href="mailto:support@fastogt.com?subject=Partnership with FastoCloud&body=Hi, I'd like to set up FastoCloud solution!"><button>Contact
-                    us</button></a>
-        </div>
-    </div>
-</div></header>
-        <main class="pricing"><div class="inner_container">
-    <div class="pricing_main">
-        <div class="pricing_header">
-            <div class="pricing_h1">Media Part</div>
-            <div class="per">
-                <button class="focus_btn" onclick="perMonth()">Per month</button>
-                <button class="focus_btn" onclick="perYear()">Per year</button>
-                <button class="focus_btn" onclick="perLifetime()">For a lifetime</button>
-            </div>
-        </div>
-        <div class="pricing_desktop">
-            <div class="slide">
-                <div class="slide_info">
-                    <h2>Community</h2>
-                    <p class="price" id="community">$ 15</p>
-                    <p>- Restreaming media source</p>
-                    <p>- Encoding/Transcoding media source</p>
-                    <p>- Multicasting</p>
-                    <p>- Logo/Image overlay</p>
-                    <p>- Text overlay</p>
-                    <a
-                        href="mailto:support@fastogt.com?subject=Partnership with FastoCloud&body=Hi, I'd like to set up FastoCloud CCTV solution!"><button>Contact
-                            us</button></a>
+        <header>
+            <div class="inner_container">
+                <div class="header_wrapper">
+                    <nav>
+                        <div class="hamburger-menu">
+                            <input id="menu__toggle" type="checkbox" />
+                            <label class="menu__btn" for="menu__toggle">
+                                <span></span>
+                            </label>
+                            <ul class="menu__box">
+                                <li><a class="menu__item_active" href="index.html#complete">Products & Solutions</a>
+                                </li>
+                                <li><a class="menu__item" href="pricing.html">Pricing</a></li>
+                                <li><a class="menu__item" href="downloads.html">Downloads</a></li>
+                            </ul>
+                        </div>
+                    </nav>
+                    <div class="logo"><a href="index.html">FASTO<span>CLOUD</span></a></div>
+                    <div class="chat">
+                        <a
+                            href="mailto:support@fastogt.com?subject=Partnership with FastoCloud&body=Hi, I'd like to set up FastoCloud solution!">
+                            <button class="caht_btn">
+                                <picture>
+                                    <source srcset="img/Vector.svg" type="image/webp"><img src="img/Vector.svg" alt="">
+                                </picture>
+                            </button></a>
+                    </div>
+                    <div class="menu">
+                        <a class="menu__i_active" href="index.html#complete">Products & Solutions</a>
+                        <a class="menu__i" href="pricing.html">Pricing</a>
+                        <a class="menu__i" href="downloads.html">Downloads</a>
+                        <a
+                            href="mailto:support@fastogt.com?subject=Partnership with FastoCloud&body=Hi, I'd like to set up FastoCloud solution!"><button>Contact
+                                us</button></a>
+                    </div>
                 </div>
             </div>
+        </header>
+        <main class="pricing">
+            <div class="inner_container">
+                <div class="pricing_main">
+                    <div class="pricing_header">
+                        <div class="pricing_h1">Media Part</div>
+                        <div class="per">
+                            <button id="per_month" class="focus_btn_active" onclick="perMonth()">Per month</button>
+                            <button id="per_year" class="focus_btn" onclick="perYear()">Per year</button>
+                            <button id="per_lifetime" class="focus_btn" onclick="perLifetime()">For a lifetime</button>
+                        </div>
+                    </div>
+                    <div class="pricing_desktop">
+                        <div class="slide">
+                            <div class="slide_info">
+                                <h2>Community</h2>
+                                <p class="price" id="community">$ 15</p>
+                                <p>- Restreaming media source</p>
+                                <p>- Encoding/Transcoding media source</p>
+                                <p>- Multicasting</p>
+                                <p>- Logo/Image overlay</p>
+                                <p>- Text overlay</p>
+                                <a
+                                    href="mailto:support@fastogt.com?subject=Partnership with FastoCloud&body=Hi, I'd like to set up FastoCloud Community Media Part!"><button>Contact
+                                        us</button></a>
+                            </div>
+                        </div>
 
-            <div class="slide">
-                <div class="slide_info">
-                    <h2>PRO</h2>
-                    <p class="price" id="pro">$ 30</p>
-                    <p>- WebRTC streams</p>
-                    <p>- Internal CDN/Load balance modules</p>
-                    <p>- Probe streams</p>
-                    <p>- Scaning local folders</p>
-                    <p>- Realtime changing input stream</p>
-                    <a
-                        href="mailto:support@fastogt.com?subject=Partnership with FastoCloud&body=Hi, I'd like to set up FastoCloud CCTV solution!"><button>Contact
-                            us</button></a>
-                </div>
-            </div>
-            <div class="slide">
-                <div class="slide_info">
-                    <h2>PRO ML</h2>
-                    <p class="price" id="pro_ml">$ 100</p>
-                    <p>- AI Event notificastion</p>
-                    <p>- Nvidia Deepstream, Maxine support</p>
-                    <p>- Tensorflow models for realtime detection</p>
-                    <p>- Custom neural models</p>
-                    <a
-                        href="mailto:support@fastogt.com?subject=Partnership with FastoCloud&body=Hi, I'd like to set up FastoCloud CCTV solution!"><button>Contact
-                            us</button></a>
-                </div>
-            </div>
-        </div>
-        <div class="slider-conteiner">
-            <div class="slider-wrapper">
-                <div class="slider">
-                    <div class="slide">
-                        <div class="slide_info">
-                            <h2>Community</h2>
-                            <p class="price" id="community">$ 15</p>
-                            <p>- Restreaming media source</p>
-                            <p>- Encoding/Transcoding media source</p>
-                            <p>- Multicasting</p>
-                            <p>- Logo/Image overlay</p>
-                            <p>- Text overlay</p>
-                            <a
-                                href="mailto:support@fastogt.com?subject=Partnership with FastoCloud&body=Hi, I'd like to set up FastoCloud CCTV solution!"><button>Contact
-                                    us</button></a>
+                        <div class="slide">
+                            <div class="slide_info">
+                                <h2>PRO</h2>
+                                <p class="price" id="pro">$ 30</p>
+                                <p>- WebRTC streams</p>
+                                <p>- Internal CDN/Load balance modules</p>
+                                <p>- Probe streams</p>
+                                <p>- Scaning local folders</p>
+                                <p>- Realtime changing input stream</p>
+                                <a
+                                    href="mailto:support@fastogt.com?subject=Partnership with FastoCloud&body=Hi, I'd like to set up FastoCloud PRO Media Part!"><button>Contact
+                                        us</button></a>
+                            </div>
+                        </div>
+                        <div class="slide">
+                            <div class="slide_info">
+                                <h2>PRO ML</h2>
+                                <p class="price" id="pro_ml">$ 100</p>
+                                <p>- AI Event notificastion</p>
+                                <p>- Nvidia Deepstream, Maxine support</p>
+                                <p>- Tensorflow models for realtime detection</p>
+                                <p>- Custom neural models</p>
+                                <a
+                                    href="mailto:support@fastogt.com?subject=Partnership with FastoCloud&body=Hi, I'd like to set up FastoCloud PRO ML Media Part!"><button>Contact
+                                        us</button></a>
+                            </div>
                         </div>
                     </div>
-                    <div class="slide">
-                        <div class="slide_info">
-                            <h2>PRO</h2>
-                            <p class="price" id="pro">$ 30</p>
-                            <p>- WebRTC streams</p>
-                            <p>- Internal CDN/Load balance modules</p>
-                            <p>- Probe streams</p>
-                            <p>- Scaning local folders</p>
-                            <p>- Realtime changing input stream</p>
-                            <a
-                                href="mailto:support@fastogt.com?subject=Partnership with FastoCloud&body=Hi, I'd like to set up FastoCloud CCTV solution!"><button>Contact
-                                    us</button></a>
+                    <div class="slider-conteiner">
+                        <div class="slider-wrapper">
+                            <div class="slider">
+                                <div class="slide">
+                                    <div class="slide_info">
+                                        <h2>Community</h2>
+                                        <p class="price" id="community_m">$ 15</p>
+                                        <p>- Restreaming media source</p>
+                                        <p>- Encoding/Transcoding media source</p>
+                                        <p>- Multicasting</p>
+                                        <p>- Logo/Image overlay</p>
+                                        <p>- Text overlay</p>
+                                        <a
+                                            href="mailto:support@fastogt.com?subject=Partnership with FastoCloud&body=Hi, I'd like to set up FastoCloud Community Media Part!"><button>Contact
+                                                us</button></a>
+                                    </div>
+                                </div>
+                                <div class="slide">
+                                    <div class="slide_info">
+                                        <h2>PRO</h2>
+                                        <p class="price" id="pro_m">$ 30</p>
+                                        <p>- WebRTC streams</p>
+                                        <p>- Internal CDN/Load balance modules</p>
+                                        <p>- Probe streams</p>
+                                        <p>- Scaning local folders</p>
+                                        <p>- Realtime changing input stream</p>
+                                        <a
+                                            href="mailto:support@fastogt.com?subject=Partnership with FastoCloud&body=Hi, I'd like to set up FastoCloud PRO Media Part!"><button>Contact
+                                                us</button></a>
+                                    </div>
+                                </div>
+                                <div class="slide">
+                                    <div class="slide_info">
+                                        <h2>PRO ML</h2>
+                                        <p class="price" id="pro_ml_m">$ 100</p>
+                                        <p>- AI Event notificastion</p>
+                                        <p>- Nvidia Deepstream, Maxine support</p>
+                                        <p>- Tensorflow models for realtime detection</p>
+                                        <p>- Custom neural models</p>
+                                        <a
+                                            href="mailto:support@fastogt.com?subject=Partnership with FastoCloud&body=Hi, I'd like to set up FastoCloud PRO ML Media Part!"><button>Contact
+                                                us</button></a>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="slide">
-                        <div class="slide_info">
-                            <h2>PRO ML</h2>
-                            <p class="price" id="pro_ml">$ 100</p>
-                            <p>- AI Event notificastion</p>
-                            <p>- Nvidia Deepstream, Maxine support</p>
-                            <p>- Tensorflow models for realtime detection</p>
-                            <p>- Custom neural models</p>
-                            <a
-                                href="mailto:support@fastogt.com?subject=Partnership with FastoCloud&body=Hi, I'd like to set up FastoCloud CCTV solution!"><button>Contact
-                                    us</button></a>
+                    <!-- MIDDLEWARE -->
+                    <div class="pricing_header">
+                        <div class="pricing_h1">Middleware</div>
+                    </div>
+                    <div class="pricing_desktop">
+                        <div class="slide">
+                            <div class="slide_info">
+                                <h2>IPTV / OTT</h2>
+                                <p class="price" id="middleware">$ 50</p>
+                                <p>- Manage Subscribers, Content, Billing, Products, Applications, Devices</p>
+                                <p>- Apps customisation</p>
+                                <p>- Supports multiple accounts</p>
+                                <p>- Supports multiple accounts</p>
+                                <a href="https://crocott.com/pricing.html" target="_blank"><button>See more</button></a>
+                            </div>
+                        </div>
+                        <div class="slide">
+                            <div class="slide_info">
+                                <h2>CCTV</h2>
+                                <span class="gap"></span>
+                                <p>- Archives</p>
+                                <p>- Detection modules</p>
+                                <p>- Realtime notifications</p>
+                                <p>- Archives postprocessing</p>
+                                <p>- Video/Audio Analytics</p>
+                                <p>- WebRTC/P2P players</p>
+                                <button>Negotiable</button>
+                            </div>
+                        </div>
+                        <div class="slide">
+                            <div class="slide_info">
+                                <h2>Computer vision</h2>
+                                <span class="gap"></span>
+                                <p>- Custom models</p>
+                                <p>- Realtime notifications</p>
+                                <p>- Model training</p>
+                                <p>- Audio/Video analytics</p>
+                                <p>- Post processing</p>
+                                <p>- Any Input/Outputs formats</p>
+                                <button>Negotiable</button>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </div>
-        </div>
-        <div class="pricing_header">
-            <div class="pricing_h1">Middleware</div>
-        </div>
-        <div class="pricing_desktop">
-            <div class="slide">
-                <div class="slide_info">
-                    <h2>IPTV / OTT</h2>
-                    <p class="price" id="middleware">$ 50</p>
-                    <p>- Manage Subscribers, Content, Billing, Products, Applications, Devices</p>
-                    <p>- Apps customisation</p>
-                    <p>- Supports multiple accounts</p>
-                    <p>- Supports multiple accounts</p>
-                    <a href="https://crocott.com/pricing.html" target="_blank"><button>See more</button></a>
-                </div>
-            </div>
-            <div class="slide">
-                <div class="slide_info">
-                    <h2>CCTV</h2>
-                    <p>- Archives</p>
-                    <p>- Detection modules</p>
-                    <p>- Realtime notifications</p>
-                    <p>- Archives postprocessing</p>
-                    <p>- Video/Audio Analytics</p>
-                    <p>- WebRTC/P2P players</p>
-                    <button>Negotiable</button>
-                </div>
-            </div>
-            <div class="slide">
-                <div class="slide_info">
-                    <h2>Computer vision</h2>
-                    <p>- Custom models</p>
-                    <p>- Realtime notifications</p>
-                    <p>- Model training</p>
-                    <p>- Audio/Video analytics</p>
-                    <p>- Post processing</p>
-                    <p>- Any Input/Outputs formats</p>
-                    <button>Negotiable</button>
-                </div>
-            </div>
-        </div>
-        <div class="slider-conteiner">
-            <div class="slider-wrapper">
-                <div class="slider">
-                    <div class="slide">
-                        <div class="slide_info">
-                            <h2>IPTV / OTT</h2>
-                            <p class="price" id="middleware">$ 50</p>
-                            <p>- Manage Subscribers, Content, Billing, Products, Applications, Devices</p>
-                            <p>- Apps customisation</p>
-                            <p>- Supports multiple accounts</p>
-                            <p>- Supports multiple accounts</p>
-                            <button>See more</button>
+                    <div class="slider-conteiner">
+                        <div class="slider-wrapper">
+                            <div class="slider">
+                                <div class="slide">
+                                    <div class="slide_info">
+                                        <h2>IPTV / OTT</h2>
+                                        <p class="price" id="middleware_m">$ 50</p>
+                                        <p>- Manage Subscribers, Content, Billing, Products, Applications, Devices</p>
+                                        <p>- Apps customisation</p>
+                                        <p>- Supports multiple accounts</p>
+                                        <p>- Supports multiple accounts</p>
+                                        <button>See more</button>
+                                    </div>
+                                </div>
+                                <div class="slide">
+                                    <div class="slide_info">
+                                        <h2>CCTV</h2>
+                                        <p>- Archives</p>
+                                        <p>- Detection modules</p>
+                                        <p>- Realtime notifications</p>
+                                        <p>- Archives postprocessing</p>
+                                        <p>- Video/Audio Analytics</p>
+                                        <p>- WebRTC/P2P players</p>
+                                        <button>Negotiable</button>
+                                    </div>
+                                </div>
+                                <div class="slide">
+                                    <div class="slide_info">
+                                        <h2>Computer vision</h2>
+                                        <p>- Custom models</p>
+                                        <p>- Realtime notifications</p>
+                                        <p>- Model training</p>
+                                        <p>- Audio/Video analytics</p>
+                                        <p>- Post processing</p>
+                                        <p>- Any Input/Outputs formats</p>
+                                        <button>Negotiable</button>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="slide">
-                        <div class="slide_info">
-                            <h2>CCTV</h2>
-                            <p>- Archives</p>
-                            <p>- Detection modules</p>
-                            <p>- Realtime notifications</p>
-                            <p>- Archives postprocessing</p>
-                            <p>- Video/Audio Analytics</p>
-                            <p>- WebRTC/P2P players</p>
-                            <button>Negotiable</button>
+                    <!-- Additional -->
+                    <div class="pricing_header">
+                        <div class="pricing_h1">Additional</div>
+                    </div>
+                    <div class="pricing_desktop">
+                        <div class="slide">
+                            <div class="slide_info">
+                                <h2>Consultation</h2>
+                                <p class="price">$ 50 / h</p>
+                                <p>- Hardware specification</p>
+                                <p>- Architecture design</p>
+                                <p>- Development team review</p>
+                                <p>- Code review</p>
+                                <p>- Content provider recommendations</p>
+                                <a
+                                    href="mailto:support@fastogt.com?subject=Partnership with FastoCloud&body=Hi, I'm interested in the consultation! Can I get more information?"><button>Contact
+                                        us</button></a>
+                            </div>
+                        </div>
+                        <div class="slide">
+                            <div class="slide_info">
+                                <h2>Custom development</h2>
+                                <span class="gap_0"></span>
+                                <p>- Custom design</p>
+                                <p>- Custom layouts</p>
+                                <p>- Custom admin panel</p>
+                                <p>- Custom SDK</p>
+                                <p>- Server deployment, configuration, and administration</p>
+                                <a
+                                    href="mailto:support@fastogt.com?subject=Partnership with FastoCloud&body=Hi, I'm interested in custom development! Can I get more information?"><button>Contact
+                                        us</button></a>
+                            </div>
+                        </div>
+                        <div class="slide">
+                            <div class="slide_info">
+                                <h2>Outsourcing</h2>
+                                <span class="gap_1"></span>
+                                <p>- Web Development</p>
+                                <p>- App Development</p>
+                                <p>- Backend development</p>
+                                <p>- QA Automation</p>
+                                <p>- Cloud and DevOps</p>
+                                <p>- UX UI</p>
+                                <a
+                                    href="mailto:support@fastogt.com?subject=Partnership with FastoCloud&body=Hi! I'd like to hire your team!"><button>Contact
+                                        us</button></a>
+                            </div>
                         </div>
                     </div>
-                    <div class="slide">
-                        <div class="slide_info">
-                            <h2>Computer vision</h2>
-                            <p>- Custom models</p>
-                            <p>- Realtime notifications</p>
-                            <p>- Model training</p>
-                            <p>- Audio/Video analytics</p>
-                            <p>- Post processing</p>
-                            <p>- Any Input/Outputs formats</p>
-                            <button>Negotiable</button>
+                    <div class="slider-conteiner">
+                        <div class="slider-wrapper">
+                            <div class="slider">
+                                <div class="slide">
+                                    <div class="slide_info">
+                                        <h2>Consultation</h2>
+                                        <p class="price">$ 50 / h</p>
+                                        <p>- Hardware specification</p>
+                                        <p>- Architecture design</p>
+                                        <p>- Development team review</p>
+                                        <p>- Code review</p>
+                                        <p>- Content provider recommendations</p>
+                                        <a
+                                            href="mailto:support@fastogt.com?subject=Partnership with FastoCloud&body=Hi, I'm interested in the consultation! Can I get more information?"><button>Contact
+                                                us</button></a>
+                                    </div>
+                                </div>
+                                <div class="slide">
+                                    <div class="slide_info">
+                                        <h2>Custom development</h2>
+                                        <p>- Custom design</p>
+                                        <p>- Custom layouts</p>
+                                        <p>- Custom admin panel</p>
+                                        <p>- Custom SDK</p>
+                                        <p>- Server deployment, configuration, and administration</p>
+                                        <a
+                                            href="mailto:support@fastogt.com?subject=Partnership with FastoCloud&body=Hi, I'm interested in custom development! Can I get more information?"><button>Contact
+                                                us</button></a>
+                                    </div>
+                                </div>
+                                <div class="slide">
+                                    <div class="slide_info">
+                                        <h2>Outsourcing</h2>
+                                        <p>- Web Development</p>
+                                        <p>- App Development</p>
+                                        <p>- Backend development</p>
+                                        <p>- QA Automation</p>
+                                        <p>- Cloud and DevOps</p>
+                                        <p>- UX UI</p>
+                                        <a
+                                            href="mailto:support@fastogt.com?subject=Partnership with FastoCloud&body=Hi! I'd like to hire your team!"><button>Contact
+                                                us</button></a>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </div>
-        </div>
-        <div class="pricing_header">
-            <div class="pricing_h1">Additional</div>
-        </div>
-        <div class="pricing_desktop">
-            <div class="slide">
-                <div class="slide_info">
-                    <h2>Consultation</h2>
-                    <p class="price">$ 50 / h</p>
-                    <p>- Hardware specification</p>
-                    <p>- Architecture design</p>
-                    <p>- Development team review</p>
-                    <p>- Code review</p>
-                    <p>- Content provider recommendations</p>
-                    <a href="mailto:support@fastogt.com?subject=Partnership with FastoCloud&body=Hi, I'd like to set up FastoCloud CCTV
-                    solution!"><button>Contact
-                            us</button></a>
-                </div>
-            </div>
-            <div class="slide">
-                <div class="slide_info">
-                    <h2>Custom development</h2>
-                    <p>- Custom design</p>
-                    <p>- Custom layouts</p>
-                    <p>- Custom admin panel</p>
-                    <p>- Custom SDK</p>
-                    <p>- Server deployment, configuration, and administration</p>
-                    <a href="mailto:support@fastogt.com?subject=Partnership with FastoCloud&body=Hi, I'd like to set up FastoCloud CCTV
-                                        solution!"><button>Contact
-                            us</button></a>
-                </div>
-            </div>
-            <div class="slide">
-                <div class="slide_info">
-                    <h2>Outsourcing</h2>
-                    <p>- Web Development</p>
-                    <p>- App Development</p>
-                    <p>- Backend development</p>
-                    <p>- QA Automation</p>
-                    <p>- Cloud and DevOps</p>
-                    <p>- UX UI</p>
-                    <a href="mailto:support@fastogt.com?subject=Partnership with FastoCloud&body=Hi, I'd like to set up FastoCloud CCTV
-                                        solution!"><button>Contact
-                            us</button></a>
-                </div>
-            </div>
-        </div>
-        <div class="slider-conteiner">
-            <div class="slider-wrapper">
-                <div class="slider">
-                    <div class="slide">
-                        <div class="slide_info">
-                            <h2>Consultation</h2>
-                            <p class="price">$ 50 / h</p>
-                            <p>- Hardware specification</p>
-                            <p>- Architecture design</p>
-                            <p>- Development team review</p>
-                            <p>- Code review</p>
-                            <p>- Content provider recommendations</p>
-                            <a href="mailto:support@fastogt.com?subject=Partnership with FastoCloud&body=Hi, I'd like to set up FastoCloud CCTV
-                                                solution!"><button>Contact
-                                    us</button></a>
-                        </div>
-                    </div>
-                    <div class="slide">
-                        <div class="slide_info">
-                            <h2>Custom development</h2>
-                            <p>- Custom design</p>
-                            <p>- Custom layouts</p>
-                            <p>- Custom admin panel</p>
-                            <p>- Custom SDK</p>
-                            <p>- Server deployment, configuration, and administration</p>
-                            <a href="mailto:support@fastogt.com?subject=Partnership with FastoCloud&body=Hi, I'd like to set up FastoCloud CCTV
-                                                solution!"><button>Contact
-                                    us</button></a>
-                        </div>
-                    </div>
-                    <div class="slide">
-                        <div class="slide_info">
-                            <h2>Outsourcing</h2>
-                            <p>- Web Development</p>
-                            <p>- App Development</p>
-                            <p>- Backend development</p>
-                            <p>- QA Automation</p>
-                            <p>- Cloud and DevOps</p>
-                            <p>- UX UI</p>
-                            <a href="mailto:support@fastogt.com?subject=Partnership with FastoCloud&body=Hi, I'd like to set up FastoCloud CCTV
-                                                solution!"><button>Contact
-                                    us</button></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
 
-    </div>
-    <script>
-        $(document).ready(function () {
-            $('.slider').slick({
-                dots: true,
-                slidesToShow: 1,
-                speed: 300,
-                centerMode: true,
-                variableWidth: true
-            });
-        });
-    </script>
+                </div>
+                <script>
+                    $(document).ready(function () {
+                        $('.slider').slick({
+                            dots: true,
+                            slidesToShow: 1,
+                            speed: 300,
+                            centerMode: true,
+                            variableWidth: true
+                        });
+                    });
+                </script>
 
 
 
 
-</div>
-</div></main>
-        <footer><div class="footer_container">
-    <div class="logo_social">
-        <div class="logo_mob"><a href="index.html"> FASTO<span>CLOUD</span></a></div>
-        <div class="social_icon">
-            <a href="https://www.instagram.com/fasto_gt" target="_blank"><picture><source srcset="img/instagram.svg" type="image/webp"><img src="img/instagram.svg" alt=""></picture></a>
-            <a href="https://www.facebook.com/FastoGT" target="_blank"><picture><source srcset="img/facebook.svg" type="image/webp"><img src="img/facebook.svg" alt=""></picture></a>
-            <a href="https://discord.com/invite/cnUXsws" target="_blank"><picture><source srcset="img/discord.svg" type="image/webp"><img src="img/discord.svg" alt=""></picture></a>
-            <a href="https://www.linkedin.com/company/fastogt/" target="_blank"><picture><source srcset="img/in.svg" type="image/webp"><img src="img/in.svg" alt=""></picture></a>
-            <a href="https://github.com/fastogt/fastocloud_docs/wiki" target="_blank"><picture><source srcset="img/git.svg" type="image/webp"><img src="img/git.svg" alt=""></picture></a>
-        </div>
+            </div>
     </div>
-    <div class="footer_link">
-        <p>Products</p>
-        <a href="index.html#complete">Middleware</a>
-        <a href="index.html#ott">OTTV / IPTV players</a>
-        <a href="index.html#cctv">CCTV</a>
-        <a href="index.html#comp_vision">Computer vision</a>
-        <a href="index.html#rtc">WEBRTC</a>
-    </div>
-    <div class="footer_link">
-        <p>Company</p>
-        <a href="https://github.com/fastogt" target="_blank">About us</a>
-    </div>
-    <div class="footer_link">
-        <p>Contacts</p>
-        <a
-            href="mailto:support@fastogt.com?subject=Partnership with FastoCloud&body=Hi, I'd like ti set up FastoCloud solution!">support@fastogt.com</a>
-    </div>
-</div>
-<div class="footer_container_mobile">
-    <div class="logo_mob"><a href="index.html"> FASTO<span>CLOUD</span></a></div>
-    <div class="social_icon">
-        <a href="https://www.instagram.com/fasto_gt" target="_blank"><picture><source srcset="img/instagram.svg" type="image/webp"><img src="img/instagram.svg" alt=""></picture></a>
-        <a href="https://www.facebook.com/FastoGT" target="_blank"><picture><source srcset="img/facebook.svg" type="image/webp"><img src="img/facebook.svg" alt=""></picture></a>
-        <a href="https://discord.com/invite/cnUXsws" target="_blank"><picture><source srcset="img/discord.svg" type="image/webp"><img src="img/discord.svg" alt=""></picture></a>
-        <a href="https://www.linkedin.com/company/fastogt/" target="_blank"><picture><source srcset="img/in.svg" type="image/webp"><img src="img/in.svg" alt=""></picture></a>
-        <a href="https://github.com/fastogt/fastocloud_docs/wiki" target="_blank"><picture><source srcset="img/git.svg" type="image/webp"><img src="img/git.svg" alt=""></picture></a>
-    </div>
-    <div class="footer_nav">
-        <div class="footer_nav_items">
-            <div class="f_item_titel" onclick="show_f_nav(atr = 'prod')">
+    </main>
+    <footer>
+        <div class="footer_container">
+            <div class="logo_social">
+                <div class="logo_mob"><a href="index.html"> FASTO<span>CLOUD</span></a></div>
+                <div class="social_icon">
+                    <a href="https://www.instagram.com/fasto_gt" target="_blank">
+                        <picture>
+                            <source srcset="img/instagram.svg" type="image/webp"><img src="img/instagram.svg" alt="">
+                        </picture>
+                    </a>
+                    <a href="https://www.facebook.com/FastoGT" target="_blank">
+                        <picture>
+                            <source srcset="img/facebook.svg" type="image/webp"><img src="img/facebook.svg" alt="">
+                        </picture>
+                    </a>
+                    <a href="https://discord.com/invite/cnUXsws" target="_blank">
+                        <picture>
+                            <source srcset="img/discord.svg" type="image/webp"><img src="img/discord.svg" alt="">
+                        </picture>
+                    </a>
+                    <a href="https://www.linkedin.com/company/fastogt/" target="_blank">
+                        <picture>
+                            <source srcset="img/in.svg" type="image/webp"><img src="img/in.svg" alt="">
+                        </picture>
+                    </a>
+                    <a href="https://github.com/fastogt/fastocloud_docs/wiki" target="_blank">
+                        <picture>
+                            <source srcset="img/git.svg" type="image/webp"><img src="img/git.svg" alt="">
+                        </picture>
+                    </a>
+                </div>
+            </div>
+            <div class="footer_link">
                 <p>Products</p>
-                <picture><source srcset="img/arrow.svg" type="image/webp"><img src="img/arrow.svg" alt="" id="prod_a"></picture>
+                <a href="index.html#complete">Middleware</a>
+                <a href="index.html#ott">OTTV / IPTV players</a>
+                <a href="index.html#cctv">CCTV</a>
+                <a href="index.html#comp_vision">Computer vision</a>
+                <a href="index.html#rtc">WEBRTC</a>
             </div>
-            <ul id="prod">
-                <a href="index.html#complete">
-                    <li>Middleware</li>
-                </a>
-                <a href="index.html#ott">
-                    <li>OTTV / IPTV players</li>
-                </a>
-                <a href="index.html#cctv">
-                    <li>CCTV</li>
-                </a>
-                <a href="index.html#comp_vision">
-                    <li>Computer vision</li>
-                </a>
-                <a href="index.html#rtc">
-                    <li>WEBRTC</li>
-                </a>
-            </ul>
-        </div>
-        <div class="footer_nav_items">
-            <div class="f_item_titel" onclick="show_f_nav(atr = 'comp')">
+            <div class="footer_link">
                 <p>Company</p>
-                <picture><source srcset="img/arrow.svg" type="image/webp"><img src="img/arrow.svg" alt="" id="comp_a"></picture>
+                <a href="https://github.com/fastogt" target="_blank">About us</a>
             </div>
-            <ul id="comp">
-                <a href="https://github.com/fastogt" target="_blank">
-                    <li>About us</li>
-                </a>
-            </ul>
-        </div>
-        <div class="footer_nav_items" onclick="show_f_nav(atr = 'cont')">
-            <div class="f_item_titel">
+            <div class="footer_link">
                 <p>Contacts</p>
-                <picture><source srcset="img/arrow.svg" type="image/webp"><img src="img/arrow.svg" alt="" id="cont_a"></picture>
-            </div>
-            <ul id="cont">
                 <a
-                    href="mailto:support@fastogt.com?subject=Partnership with FastoCloud&body=Hi, I'd like to set up FastoCloud solution!">
-                    <li>support@fastogt.com</li>
-                </a>
-            </ul>
+                    href="mailto:support@fastogt.com?subject=Partnership with FastoCloud&body=Hi, I'd like to set up FastoCloud solution!">support@fastogt.com</a>
+            </div>
         </div>
-    </div>
-</div></footer>
+        <div class="footer_container_mobile">
+            <div class="logo_mob"><a href="index.html"> FASTO<span>CLOUD</span></a></div>
+            <div class="social_icon">
+                <a href="https://www.instagram.com/fasto_gt" target="_blank">
+                    <picture>
+                        <source srcset="img/instagram.svg" type="image/webp"><img src="img/instagram.svg" alt="">
+                    </picture>
+                </a>
+                <a href="https://www.facebook.com/FastoGT" target="_blank">
+                    <picture>
+                        <source srcset="img/facebook.svg" type="image/webp"><img src="img/facebook.svg" alt="">
+                    </picture>
+                </a>
+                <a href="https://discord.com/invite/cnUXsws" target="_blank">
+                    <picture>
+                        <source srcset="img/discord.svg" type="image/webp"><img src="img/discord.svg" alt="">
+                    </picture>
+                </a>
+                <a href="https://www.linkedin.com/company/fastogt/" target="_blank">
+                    <picture>
+                        <source srcset="img/in.svg" type="image/webp"><img src="img/in.svg" alt="">
+                    </picture>
+                </a>
+                <a href="https://github.com/fastogt/fastocloud_docs/wiki" target="_blank">
+                    <picture>
+                        <source srcset="img/git.svg" type="image/webp"><img src="img/git.svg" alt="">
+                    </picture>
+                </a>
+            </div>
+            <div class="footer_nav">
+                <div class="footer_nav_items">
+                    <div class="f_item_titel" onclick="show_f_nav(atr = 'prod')">
+                        <p>Products</p>
+                        <picture>
+                            <source srcset="img/arrow.svg" type="image/webp"><img src="img/arrow.svg" alt=""
+                                id="prod_a">
+                        </picture>
+                    </div>
+                    <ul id="prod">
+                        <a href="index.html#complete">
+                            <li>Middleware</li>
+                        </a>
+                        <a href="index.html#ott">
+                            <li>OTTV / IPTV players</li>
+                        </a>
+                        <a href="index.html#cctv">
+                            <li>CCTV</li>
+                        </a>
+                        <a href="index.html#comp_vision">
+                            <li>Computer vision</li>
+                        </a>
+                        <a href="index.html#rtc">
+                            <li>WEBRTC</li>
+                        </a>
+                    </ul>
+                </div>
+                <div class="footer_nav_items">
+                    <div class="f_item_titel" onclick="show_f_nav(atr = 'comp')">
+                        <p>Company</p>
+                        <picture>
+                            <source srcset="img/arrow.svg" type="image/webp"><img src="img/arrow.svg" alt=""
+                                id="comp_a">
+                        </picture>
+                    </div>
+                    <ul id="comp">
+                        <a href="https://github.com/fastogt" target="_blank">
+                            <li>About us</li>
+                        </a>
+                    </ul>
+                </div>
+                <div class="footer_nav_items" onclick="show_f_nav(atr = 'cont')">
+                    <div class="f_item_titel">
+                        <p>Contacts</p>
+                        <picture>
+                            <source srcset="img/arrow.svg" type="image/webp"><img src="img/arrow.svg" alt=""
+                                id="cont_a">
+                        </picture>
+                    </div>
+                    <ul id="cont">
+                        <a
+                            href="mailto:support@fastogt.com?subject=Partnership with FastoCloud&body=Hi, I'd like to set up FastoCloud solution!">
+                            <li>support@fastogt.com</li>
+                        </a>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
     </div>
 </body>
 
