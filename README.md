@@ -8,7 +8,7 @@ HEAD -- ЭТО ГОЛОВА
 ```mermaid
 graph LR;
 untr -- "git add" --> started;
-started --- "???"   --> tracked/commited;
+started -- "???"   --> tracked/commited;
 
 
 %% стрелка без текста для примера:
